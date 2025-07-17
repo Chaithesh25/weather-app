@@ -4,14 +4,24 @@
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx @tailwindcss/cli -i ./src/input.css -o ./weatherappfiles/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./weatherappfiles/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "��#\u0000 \u0000w\u0000e\u0000a\u0000t\u0000h\u0000e\u0000r\u0000-\u0000a\u0000p\u0000p\u0000\r\u0000 \u0000",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/cli": "^4.1.11"
+  },
+  "devDependencies": {
     "tailwindcss": "^4.1.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chaithesh25/weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chaithesh25/weather-app/issues"
+  },
+  "homepage": "https://github.com/Chaithesh25/weather-app#readme"
 }
