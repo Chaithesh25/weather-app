@@ -5,21 +5,36 @@
 
 
 const weathericon = document.querySelector("#icons")
-console.log(weathericon);
+const weatherbox = document.querySelector(".weather")
+
 
 
 
 async function checkweather(input) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=fec7e27a2362e04800fe797b313f2a81`)
     var data = await response.json()
-    console.log(data);
+       if(data.cod!=="404" ){
+        weatherbox.classList.remove("hidden")
+    }else{
+        weatherbox.classList.add("hidden")
+        
+        console.log("invalid city name");
+        
+        
+    }
     
-    document.querySelector("#city-name").innerHTML =data.name
+    
+    const cityname = document.querySelector("#city-name").innerHTML =data.name
     document.querySelector("#temp").innerHTML = Math.round(data.main.temp)+"°C"
     const weatherr = data.weather[0].main
-    if(weatherr =="clouds")
+
+     
+    
+
+    if(weatherr =="Clouds")
     {
-        weathericon.src ="images/clouds.png"
+       weathericon.src ="images/clouds.png";
+        
     }else if(weatherr == "rain")
     {
         weathericon.src ="images/rain.png"
@@ -33,6 +48,13 @@ async function checkweather(input) {
     {
         weatherr.src ="images/drizzle.png"
     }
+
+    
+    
+    
+
+
+
 }
 
 
@@ -44,5 +66,7 @@ const value = document.getElementById("SearchBtn").addEventListener("click",func
     checkweather(input)
     
 })
+
+console.log(value);
 
 
