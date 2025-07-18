@@ -4,27 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Search Box</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-gray-800 flex items-center justify-center min-h-screen">
 
   <div class="flex-col w-[400px] h-[500px] bg-gradient-to-br from-teal-400 to-purple-500 rounded-xl  items-center justify-center">
-    <div class="flex items-center bg-amber-50 rounded-full py-2 px-4 w-full max-w-[250px]  mt-[20%]  justify-center ml-[70px]">
+    <div id="search"  class="flex items-center bg-amber-50 rounded-full py-2 px-4 w-full max-w-[250px]  mt-[20%]  justify-center ml-[70px] " >
       <input 
         type="text" 
         placeholder="enter city name" 
         class="flex-1 text-black bg-transparent h-[40px] rounded-full outline-none pl-4 placeholder-gray-500"
+        id="input-val"
       />
-      <button>
-        <img src="images/search.png" alt="Search" class="h-5 ml-2"/>
+      <button id="SearchBtn">
+        <img src="images/search.png" alt="Search" class="h-5 ml-2" id=""/>
       </button>
 
 
     </div>
+    <div class="weather hidden">
     <div class="ml-[23%] flex-col ">
-        <img src="images/rain.png" alt="">
-        <h2 class="text-white ml-[50px] text-[25px] font-bold">New York</h2>
-        <h1 class="text-white ml-[80px] text-[19px] font-bold">25°C</h1>
+        <img src="images/rain.png" alt="" id="icons">
+        <h2 class="text-white ml-[50px] text-[25px] font-bold" id="city-name">New York</h2>
+        <h1 class="text-white ml-[80px] text-[19px] font-bold" id="temp">25°C</h1>
+    </div>
     </div>
   </div>
 <script src="scripts.js"></script>
