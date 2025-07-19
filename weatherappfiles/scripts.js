@@ -1,12 +1,9 @@
-// let inputvalue = document.querySelector("#input-val")
-// let button = document.querySelector("#SearchBtn")
-// let citydata =document.querySelector("#city-name").innerHTML =data.name
-// console.log(citydata);
+
 
 
 const weathericon = document.querySelector("#icons")
 const weatherbox = document.querySelector(".weather")
-
+const errormsg = document.querySelector("#invalid-data")
 
 
 
@@ -15,12 +12,10 @@ async function checkweather(input) {
     var data = await response.json()
        if(data.cod!=="404" ){
         weatherbox.classList.remove("hidden")
+        errormsg.classList.add("hidden")
     }else{
         weatherbox.classList.add("hidden")
-        
-        console.log("invalid city name");
-        
-        
+        errormsg.classList.remove("hidden")
     }
     
     
