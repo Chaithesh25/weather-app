@@ -44,12 +44,6 @@ async function checkweather(input) {
         weatherr.src ="images/drizzle.png"
     }
 
-    
-    
-    
-
-
-
 }
 
 
